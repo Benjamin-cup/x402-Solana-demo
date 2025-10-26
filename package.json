@@ -1,0 +1,37 @@
+{
+  "name": "x402-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/seller.js",
+  "scripts": {
+    "build": "tsc",
+    "seller": "node dist/seller.js",
+    "dev-seller": "vite-node src/seller.ts",
+    "buyer": "node dist/buyer.js",
+    "dev-buyer": "vite-node src/buyer.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ducphamle2/x402-demo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ducphamle2/x402-demo/issues"
+  },
+  "homepage": "https://github.com/ducphamle2/x402-demo#readme",
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
+  "dependencies": {
+    "@solana/kit": "^5.0.0",
+    "@solana/web3.js": "^1.98.4",
+    "ultimate-express": "^2.0.12",
+    "x402": "^0.6.6",
+    "x402-express": "^0.6.5",
+    "x402-fetch": "^0.6.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.9.1",
+    "dotenv": "^17.2.3",
+    "typescript": "^5.9.3"
+  }
+}
