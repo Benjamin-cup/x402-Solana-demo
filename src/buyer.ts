@@ -1,19 +1,17 @@
 import { wrapFetchWithPayment, decodeXPaymentResponse } from "x402-fetch";
 
 import { createKeyPairSignerFromBytes } from "@solana/kit";
+import { Keypair } from "@solana/web3.js";
 import { base58 } from "@scure/base";
 import dotenv from "dotenv";
 dotenv.config();
 
 const baseUrl = "http://localhost:4021";
-
 async function main() {
-  // 64-byte base58 secret key (private + public)
-  const signer = await createKeyPairSignerFromBytes(
-    base58.decode(process.env.BUYER_PRIVATE_KEY!)
-  );
+  const signer = Keypair.fromSecretKey(base58.decode(process.env.BUYER_PRIVATE_KEY!));
+  const signerForFetch = await createKeyPairSignerFromBytes(signer.secretKey);
 
-  const fetchWithPayment = wrapFetchWithPayment(fetch, signer);
+  const fetchWithPayment = wrapFetchWithPayment(fetch, signerForFetch);
 
   fetchWithPayment(`${baseUrl}/weather`, {
     //url should be something like https://api.example.com/paid-endpoint

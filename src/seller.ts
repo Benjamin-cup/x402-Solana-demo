@@ -9,13 +9,13 @@ const app = express();
 
 app.use(
   paymentMiddleware(
-    address(""), // your receiving wallet address
+    address("E7MacP4s4hERuZkfrbaS7vbtMb16MRcJrMfRMRXenCY"), // your receiving wallet address
     {
       // Route configurations for protected endpoints
       "GET /weather": {
         // USDC amount in dollars
         price: "0.01",
-        network: "solana-devnet", // for mainnet, see Running on Mainnet section
+        network: "solana", // for mainnet, see Running on Mainnet section
         // Optional: Add metadata for better discovery in x402 Bazaar
         config: {
           description: "Get current weather data for any location",
@@ -35,7 +35,7 @@ app.use(
       },
     },
     {
-      url: "https://x402.org/facilitator", // for testnet
+      url: "https://facilitator.payai.network", // for mainnet
     }
   )
 );
