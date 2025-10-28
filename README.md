@@ -1,4 +1,4 @@
-# x402-demo
+# x402 Solana Demo
 
 A demonstration of HTTP 402 (Payment Required) using the x402 protocol on Solana. This project showcases a seller-buyer workflow where API endpoints require micropayments in USDC.
 
@@ -24,8 +24,8 @@ You'll also need:
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/ducphamle2/x402-demo.git
-cd x402-demo
+git clone https://github.com/Benjamin-cup/x402-Solana-demo.git
+cd x402-Solana-demo
 ```
 
 2. Install dependencies:
@@ -215,3 +215,11 @@ SolanaError: Transaction failed when it was simulated in order to estimate the c
 ## License
 
 MIT
+## contact info
+
+
+Gmail: benjamin.bigdev@gmail.com
+
+Telegram: [@SOLBenjaminCup](https://t.me/SOLBenjaminCup)
+
+Discord: [@.benjamincup](https://discord.com/channels/@me/1305610537790476382)
